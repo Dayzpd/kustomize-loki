@@ -13,6 +13,6 @@ helmCharts:
   valuesFile: values.yaml
 images:
 - name: grafana/loki
-  newName: pulp.local.zachary.day/docker-cache/grafana/loki
+  newName: harbor.local.zachary.day/docker-cache/grafana/loki
 - name: docker.io/grafana/promtail
-  newName: pulp.local.zachary.day/docker-cache/grafana/promtail
+  newName: harbor.local.zachary.day/docker-cache/grafana/promtail
