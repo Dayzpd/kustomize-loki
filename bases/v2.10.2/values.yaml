@@ -5,6 +5,8 @@ test_pod:
 
 loki:
   enabled: true
+  image:
+    repository: pulp.local.zachary.day/docker-cache/grafana/loki
   isDefault: false
   url: http://{{(include "loki.serviceName" .)}}.{{ .Release.Namespace }}:{{ .Values.loki.service.port }}
   readinessProbe:
@@ -24,6 +26,8 @@ loki:
 
 promtail:
   enabled: true
+  global:
+    imageRegistry: pulp.local.zachary.day/docker-cache
   config:
     logLevel: info
     serverPort: 3101
