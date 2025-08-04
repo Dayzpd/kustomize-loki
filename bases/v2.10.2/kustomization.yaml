@@ -11,3 +11,8 @@ helmCharts:
   repo: https://grafana.github.io/helm-charts
   version: v2.10.2
   valuesFile: values.yaml
+images:
+- name: grafana/loki
+  newName: pulp.local.zachary.day/docker-cache/grafana/loki
+- name: docker.io/grafana/promtail
+  newName: pulp.local.zachary.day/docker-cache/grafana/promtail
